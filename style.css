@@ -1,0 +1,186 @@
+
+:root {                     /*.   Storing colors into variables for later use     */
+  
+    --dark: #0f172a;
+    --text: #585858;
+    --muted: #64748b;
+    --light: #f8fafc;
+    --border: #e2e8f0;
+    --white: #ffffff;
+    --max-width: 1100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: var(--text);
+   
+}
+
+a {
+    color: inherit;   /*.  Forces link to take color of its parent element     */
+    text-decoration: none;
+}
+
+header {
+  width: 100%;
+  background-color: var(--dark);
+  text-align:center;
+  color:white;  
+ 
+}
+main{
+    background-color: var(--light);
+}
+.section-block{
+   
+ padding:20px;
+ width: 98%;
+ margin: 4px auto 0; 
+  background-color: var(--white);
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+}
+
+/*making Grid*/
+#jobApplicationForm {
+    display: grid;
+    grid-template-columns: auto 1fr auto 1fr auto 1fr auto 1fr;
+    gap: 12px;
+    align-items: center;
+    width:80%;
+    margin:auto;
+}
+.container-form{
+    padding:24px;
+}
+
+
+
+.form-label {
+   font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.form-input{
+ width: 100%;
+    font-size: 16px;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background-color: var(--light);
+    color: var(--text);
+    outline: none;
+  
+}
+.form-input:focus {
+  background-color: var(--white);
+  border-color: #3498db;
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.15);
+}
+.form-button {  
+  grid-column: 1 / -1;
+  font-size: 16px;
+  font-weight: 600;
+  width: 80%;
+  margin:10px auto  ;
+  padding: 12px 24px;
+  color: var(--white);
+  background-color: #3498db;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+}
+.form-button:hover {
+  background-color: #2980b9;
+}
+.form-button:active {
+  transform: scale(0.98);
+}
+
+/*Section 2 CSS - Job Application - Dashboard*/
+
+.dash-row-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    align-items: center;
+    width:80%;
+    margin:auto;
+    padding:24px;
+}
+.dash-box{
+border-radius: 4px;
+text-align: center;
+padding:20px;
+
+}
+.dash-box-title{
+    margin-bottom: 10px;
+}
+.dash-box-applied{
+    background-color:rgb(86, 191, 221);
+}
+.dash-box-interview{
+     background-color:rgb(219, 239, 87);
+    
+}
+.dash-box-rejected{
+     background-color:rgb(227, 81, 93);
+}
+
+.dash-box-accepted{
+     background-color:rgb(94, 245, 77);
+}
+
+
+/*Section 3 CSS - Job Application - Board*/
+
+
+.board-cols-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+   
+    width:80%;
+    margin:auto;
+    padding:24px;
+    
+}
+.board-col{
+    
+    border-radius:6px;
+    padding:10px;
+    text-align: center  ;   
+    background-color: 	#F0F0F0;
+   
+
+}
+.col-title{
+    padding:0 10px;
+    text-align:left;
+    
+}
+
+.job-list{
+ 
+    border-radius:4px;
+    padding:10px;
+    text-align: center  ;
+    background-color: var(--white);
+    margin:10px;
+}

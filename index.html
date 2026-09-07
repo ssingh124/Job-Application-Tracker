@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Job Application Tracker</h1>
+    </header>
+    <main>
+        <!-- SECTION 1: Job Application Form -->
+        <section class="section-block" id="sectionForm">
+            
+           <h2 class="section-title">Add Application</h2>
+            <div class="container-form">
+            <form id="jobApplicationForm">
+            <label for="applicationDate" class="form-label">Application Date:</label>
+            <input type="date" class="form-input" id="applicationDate" name="applicationDate" required>
+
+            <label for="companyName" class="form-label">Company Name:</label>
+            <input type="text" class="form-input" id="companyName" name="companyName" required>
+
+            <label for="position" class="form-label">Position:</label>
+            <input type="text" class="form-input" id="position" name="position" required>
+
+            <label for="status" class="form-label">Status:</label>
+            <select class="form-input" id="status" name="status" required>
+            <option value="applied">Applied</option>
+            <option value="interview">Interview</option>
+            <option value="rejected">Rejected</option>
+            <option value="accepted">Accepted</option>
+            </select>
+
+            <button class="form-button" type="submit">+ Add New Job Application</button>
+            </form>
+            </div>
+        </section>
+
+
+        <!-- SECTION 2: Job Application Dashboard -->
+        <section class="section-block" id="sectionDashboard">
+            
+            <h2 class="section-title">Application Dashboard</h2>
+            <div class="dash-row-wrapper">
+                <div class="dash-box dash-box-applied">
+                    <h3 class="dash-box-title">Applied</h3>
+                    <span id="totalApplied"> 0 </span>
+                </div>
+                <div class="dash-box dash-box-interview">
+                    <h3 class="dash-box-title" >Interviews</h3>
+                    <span id="totalInterview"> 0 </span> 
+                </div>
+                <div class="dash-box dash-box-rejected">
+                    <h3 class="dash-box-title" >Rejected</h3>
+                    <span id="totalRejected"> 0 </span> 
+                </div>
+                <div class="dash-box dash-box-accepted">
+                    <h3 class="dash-box-title" >Accepted</h3>
+                    <span id="totalAccepted"> 0 </span> 
+                </div>
+            </div>
+            
+  
+        </section>
+
+        <!-- SECTION 3: Job Appliaction Board -->
+        <section class="section-block" id="sectionJobBoard">
+            
+            <h2 class="section-title">Application Board</h2>
+             <!-- Job ApplicationCategory Columns -->
+
+            <div class="board-cols-wrapper">
+                <!-- Applied Jobs Column-->
+                <div class="board-col" id="colApplied">
+                    <h3 class="col-title">Applied</h3>
+                    <div class="job-list" id="jobApplied">
+                        <article class="job-card" id="jobCard">
+                            <h4>Google</h4>
+                            <p>Frontend Developer</p>
+                            <p>Date Applied: September 6, 2026</p>
+                        </article>
+                    </div>
+                   
+                </div>
+                <!-- Interview Jobs Column -->
+                 <div class="board-col" id="colInterview">
+                    <h3 class="col-title">Interview</h3>
+                    <div class="job-list" id="jobInterview">
+                        <article class="job-card">
+                            <h4>Google</h4>
+                            <p>Frontend Developer</p>
+                            <p>Date Applied: September 6, 2026</p>
+                        </article>
+                    </div>
+                </div>
+                <!-- Rejected Jobs Column -->
+                 <div class="board-col" id="colRejected">
+                    <h3 class="col-title">Rejected</h3>
+                    <div class="job-list" id="jobRejected">
+                        <article class="job-card">
+                            <h4>Google</h4>
+                            <p>Frontend Developer</p>
+                            <p>Date Applied: September 6, 2026</p>
+                        </article>    
+                    </div>
+                </div>
+                <!-- Accepted Jobs Column -->
+                 <div class="board-col" id="colAccepted">
+                    <h3 class="col-title">Accepted</h3>
+                    <div class="job-list" id="jobAccepted">
+                        <article class="job-card">
+                            <h4>Google</h4>
+                            <p>Frontend Developer</p>
+                            <p>Date Applied: September 6, 2026</p>
+                        </article>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+            
+  
+        </section>
+
+    </main>
+    <footer>
+
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
