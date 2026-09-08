@@ -6,7 +6,7 @@ I created this project as a portfolio piece to demonstrate how I can combine HTM
 
 ## 🚀 Live Demo
 
-**[View Live Demo]
+**[View Live Demo] https://ssingh124.github.io/Job-Application-Tracker/
 
 ## 📂 GitHub Repository
 
