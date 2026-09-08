@@ -7,7 +7,13 @@
     --light: #f8fafc;
     --border: #e2e8f0;
     --white: #ffffff;
+    --button-blue:#3498db;
+    --red:rgb(227, 81, 93);
+    --green:rgb(94, 245, 77);
+    --yellow:rgb(219, 239, 87);
+    --blue:rgb(86, 191, 221);
     --max-width: 1100px;
+
 }
 
 * {
@@ -32,25 +38,51 @@ a {
     text-decoration: none;
 }
 
+/* =========================
+   HEADER
+========================= */
+
+
 header {
   width: 100%;
   background-color: var(--dark);
   text-align:center;
-  color:white;  
- 
+  color:var(--white);  
+  padding: 20px;
 }
+
+/* =========================
+   MAIN
+========================= */
+
 main{
     background-color: var(--light);
+    
 }
+
+/* =========================
+   SECTIONS
+========================= */
+
 .section-block{
    
- padding:20px;
+ padding:24px;
  width: 98%;
- margin: 4px auto 0; 
+ margin: 8px auto 0; 
   background-color: var(--white);
   border-radius: 4px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.section-title{
+ margin-bottom: 10px;
+}
 
+/* =========================
+   SECTION 1 - FORM
+========================= */
+
+.container-form{
+   padding:20px;
 }
 
 /*making Grid*/
@@ -58,16 +90,9 @@ main{
     display: grid;
     grid-template-columns: auto 1fr auto 1fr auto 1fr auto 1fr;
     gap: 12px;
-    align-items: center;
-    width:80%;
+    align-items:center;
     margin:auto;
 }
-.container-form{
-    padding:24px;
-}
-
-
-
 .form-label {
    font-size: 14px;
     font-weight: 600;
@@ -75,7 +100,7 @@ main{
 }
 
 .form-input{
- width: 100%;
+    width: 100%;
     font-size: 16px;
     padding: 12px 16px;
     border: 1px solid var(--border);
@@ -94,11 +119,11 @@ main{
   grid-column: 1 / -1;
   font-size: 16px;
   font-weight: 600;
-  width: 80%;
+  width: 60%;
   margin:10px auto  ;
   padding: 12px 24px;
   color: var(--white);
-  background-color: #3498db;
+  background-color: var(--button-blue);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -112,7 +137,9 @@ main{
   transform: scale(0.98);
 }
 
-/*Section 2 CSS - Job Application - Dashboard*/
+/* =========================
+   SECTION 2 - DASHBOARD
+========================= */
 
 .dash-row-wrapper{
     display: grid;
@@ -133,22 +160,24 @@ padding:20px;
     margin-bottom: 10px;
 }
 .dash-box-applied{
-    background-color:rgb(86, 191, 221);
+    background-color:var(--blue);
 }
 .dash-box-interview{
-     background-color:rgb(219, 239, 87);
+     background-color:var(--yellow);
     
 }
 .dash-box-rejected{
-     background-color:rgb(227, 81, 93);
+     background-color:var(--red);
 }
 
 .dash-box-accepted{
-     background-color:rgb(94, 245, 77);
+     background-color:var(--green);
 }
 
 
-/*Section 3 CSS - Job Application - Board*/
+/* =========================
+   SECTION 3 - BOARD
+========================= */
 
 
 .board-cols-wrapper{
@@ -185,6 +214,9 @@ padding:20px;
     margin-top:10px;
 }
 
+/* =========================
+   BUTTONS
+========================= */
 
 
 .move-button{
@@ -192,7 +224,7 @@ padding:20px;
   margin:10px auto  ;
   padding: 10px;
   color: var(--white);
-  background-color: #3498db;
+  background-color: var(--blue);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -207,7 +239,7 @@ padding:20px;
 
 
 .move-to-rejected{
-  background-color: rgb(227, 81, 93);
+  background-color: var(--red);
 
 }
 .move-to-rejected:hover {
@@ -215,10 +247,69 @@ padding:20px;
 }
 
 .move-to-accepted{
-  background-color:  rgb(94, 245, 77);
+  background-color: var(--green);
 
 }
 .move-to-accepted:hover {
   background-color: rgb(71, 193, 57); 
 }
 
+/* ==================================================
+   TABLET
+   ================================================== */
+
+@media (max-width: 1024px){
+
+
+ .section-block {
+        width: 96%;
+        padding: 20px;
+    }
+#jobApplicationForm {
+  
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+    width:80%;
+   
+}
+.dash-row-wrapper{
+    
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    
+}
+.board-cols-wrapper{
+    
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+
+}
+
+
+/* ==================================================
+   MOBILE
+   ================================================== */
+
+@media (max-width: 600px) {
+  
+#jobApplicationForm {
+
+    grid-template-columns: 1fr;
+    gap: 12px;
+   
+}
+.dash-row-wrapper{
+   
+    grid-template-columns: 1fr;
+    gap: 18px;
+    
+}
+.board-cols-wrapper{
+    
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+}
